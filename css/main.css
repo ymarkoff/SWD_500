@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  background-color: green;
 }
 
 *,
@@ -15,11 +16,9 @@ html {
 }
 
 .l-landing-page .l-game-screen {
-  width: 66.6666666667%;
+  width: calc(((100% - (20px * 12)) / 12) * 8);
   height: 70vh;
-  margin-left: 16.6666666667%;
-  margin-right: 16.6666666667%;
-  float: left;
+  margin-left: calc((100%/12)*2 + (2*20px) + 10px);
   border: solid #000;
   border-width: 1px;
   display: flex;
@@ -28,21 +27,30 @@ html {
   align-items: center;
   /* align vertical */
 }
-.l-landing-page .l-game-screen:after {
-  display: table;
-  clear: both;
-  content: "";
-}
 .l-landing-page .l-menu {
   margin-top: 5vh;
-  margin-left: 8.3333333333%;
-  float: left;
+  margin-left: calc(((100% - (20px * 12)) / 12) * 1 + 30px);
+}
+.l-landing-page .l-menu:after {
+  display: table;
+  clear: both;
+  content: " ";
 }
 .l-landing-page .l-menu .l-menu-button {
   float: left;
-  min-width: 16.6666666667%;
+  min-width: calc(((100% - (20px * 12)) / 12) * 2 + 20px);
+  margin-left: 10px;
+  margin-right: 10px;
   border: solid #000;
   border-width: 1px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
 }
 
 /*# sourceMappingURL=main.css.map */

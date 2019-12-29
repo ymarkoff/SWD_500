@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+
+    background-color: green;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.l-wrap {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.l-landing-page {
+    .l-game-screen {
+        width: calc(((100% - (20px * 12)) / 12) * 8);
+        height: 70vh;
+
+        //@todo: why is this not working?
+        // margin-left: calc((percentage(3/12)) + 10px);
+
+        margin-left: calc((100%/12)*2 + (2*20px) + 10px);
+
+        border: solid #000;
+        border-width: 1px;
+
+        display: flex;
+        justify-content: center; /* align horizontal */
+        align-items: center; /* align vertical */ 
+    }
+    .l-menu {
+        @include clearfix;
+        margin-top: 5vh;
+        margin-left: calc(((100% - (20px * 12)) / 12) * 1 + 30px);
+        .l-menu-button {
+            float: left;
+            min-width: calc(((100% - (20px * 12)) / 12) * 2 + 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+            border: solid #000;
+            border-width: 1px;
+
+            -webkit-border-radius: $landing-button-radius;
+            -moz-border-radius: $landing-button-radius;
+            border-radius: $landing-button-radius;
+
+            display: flex;
+            justify-content: center; /* align horizontal */
+            align-items: center; /* align vertical */ 
+
+
+        }
+    }
+}

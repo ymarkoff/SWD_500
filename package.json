@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass-watch": "sass --watch sass/main.scss css/main.css"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,8 @@
     "url": "https://github.com/ymarkoff/SWD_500/issues"
   },
   "homepage": "https://github.com/ymarkoff/SWD_500#readme",
-  "dependencies": {
-    "sass": "^1.23.3"
-  },
-  "scripts": {
-    "sass-watch": "sass --watch  sass/main.scss css/main.css"
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.24.0"
   }
 }
