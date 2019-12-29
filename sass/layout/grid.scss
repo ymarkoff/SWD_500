@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.l-wrap {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.l-landing-page {
+    .l-game-screen {
+        @include clearfix;
+        width: percentage(8/12);
+        height: 70vh;
+        //@todo: why is this not working?
+        // margin-left: calc((percentage(3/12)) + $gutter);
+        margin-left: percentage(2/12);
+        margin-right: percentage(2/12);
+        float: left;
+
+        border: solid #000;
+        border-width: 1px;
+
+        display: flex;
+        justify-content: center; /* align horizontal */
+        align-items: center; /* align vertical */ 
+    }
+    .l-menu {
+        margin-top: 5vh;
+        margin-left: percentage(1/12);
+        float: left;
+        .l-menu-button {
+            float: left;
+            min-width: percentage(2/12);
+            // margin-left: $gutter;
+            // margin-right: $gutter;
+            border: solid #000;
+            border-width: 1px;
+        }
+    }
+}
